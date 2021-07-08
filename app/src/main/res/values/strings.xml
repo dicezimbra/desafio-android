@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">desafio-android</string>
+    <string name="title">Título do repositório</string>
+    <string name="description">Descrição do repositório</string>
+    <string name="x">*</string>
+    <string name="y">*</string>
+    <string name="user">username</string>
+    <string name="name">Nome Sobrenome</string>
+
 </resources>

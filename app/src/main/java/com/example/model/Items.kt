@@ -25,5 +25,6 @@ data class Items (
 	@SerializedName("forks") val forks : Int, //*
 	@SerializedName("open_issues") val open_issues : Int, //*
 	@SerializedName("watchers") val watchers : Int, //*
+	@SerializedName("avatar_url") val avatar_url : String,
 
 )

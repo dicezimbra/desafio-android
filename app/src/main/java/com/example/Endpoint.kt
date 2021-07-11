@@ -1,11 +1,11 @@
 package com.example
 
-
-import Items
-import retrofit2.Call
+import ReposResponse
 import retrofit2.http.GET
 
 interface Endpoint {
-    @GET("posts")
-    fun getPosts() : Call<List<Items>>
+
+    @GET("search/repositories?q=language:Java&sort=stars&page=1")
+    suspend fun getPosts() : ReposResponse
+
 }

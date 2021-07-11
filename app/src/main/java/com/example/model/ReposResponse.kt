@@ -12,7 +12,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Json4Kotlin_Base (
+data class ReposResponse (
 
 	@SerializedName("name") val name : String,
 	@SerializedName("description") val description : String,
@@ -22,4 +22,5 @@ data class Json4Kotlin_Base (
 	@SerializedName("forks_count") val forks_count : Int,
 	@SerializedName("stargazers_count") val stargazers_count : Int,
 	@SerializedName("items") val items : List<Items>
+
 )

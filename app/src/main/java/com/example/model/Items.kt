@@ -14,7 +14,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 data class Items (
 
-	@SerializedName("name") val name : String, //*
+	@SerializedName("name") val name: String,
 	@SerializedName("full_name") val full_name : String,
 	@SerializedName("description") val description : String, //*
 	@SerializedName("title") val title : String,

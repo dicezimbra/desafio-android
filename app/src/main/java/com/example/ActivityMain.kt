@@ -25,9 +25,9 @@ class ActivityMain : AppCompatActivity() {
 
     //Listando manual para teste as string da tela
     private fun notes() : List<Items> {
-        val aux = ArrayList<Items>()
+        val aux:List<Items> = ArrayList()
         val retrofitClient =
-            NetworkUtils.getRetrofitInstance("https://github.com/")
+            NetworkUtils.getRetrofitInstance("https://jsonplaceholder.typicode.com/")
         val endpoint = retrofitClient.create(Endpoint::class.java);
         val callback = endpoint.getPosts()
 
@@ -39,13 +39,12 @@ class ActivityMain : AppCompatActivity() {
             override fun onResponse(call: Call<List<Items>>, response: Response<List<Items>>) {
                 response.body()?.forEach {
                     val recyclerView =  findViewById<RecyclerView>(R.id.recycler_view_layout_recycler)
-                    recyclerView.adapter = NoteListAdapter(notes(), context = )
-                    val tv = findViewById<TextView>(R.id.main_line_view)
+                    recyclerView.adapter = NoteListAdapter(notes(), baseContext)
+                    val tv = findViewById<TextView>(R.id.y)//Adicionar o TextView (NullPointer exception))
                     tv.text.toString().plus(it)
-
                 }
             }
         })
-        return asd
+        return aux
     }
 }

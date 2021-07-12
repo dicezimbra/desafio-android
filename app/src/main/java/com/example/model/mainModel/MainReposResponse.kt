@@ -1,3 +1,5 @@
+package com.example.model.mainModel
+
 import com.google.gson.annotations.SerializedName
 
 /*
@@ -12,24 +14,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Owner(
+data class MainReposResponse(
 
-    @SerializedName("login") val login: String, //*
-    @SerializedName("id") val id: Int,
-    @SerializedName("node_id") val node_id: String,
-    @SerializedName("avatar_url") val avatar_url: String, //*
-    @SerializedName("gravatar_id") val gravatar_id: String,
-    @SerializedName("url") val url: String,
-    @SerializedName("html_url") val html_url: String,
-    @SerializedName("followers_url") val followers_url: String,
-    @SerializedName("following_url") val following_url: String,
-    @SerializedName("gists_url") val gists_url: String,
-    @SerializedName("starred_url") val starred_url: String,
-    @SerializedName("subscriptions_url") val subscriptions_url: String,
-    @SerializedName("organizations_url") val organizations_url: String,
-    @SerializedName("repos_url") val repos_url: String, //*
-    @SerializedName("events_url") val events_url: String,
-    @SerializedName("received_events_url") val received_events_url: String,
-    @SerializedName("type") val type: String,
-    @SerializedName("site_admin") val site_admin: Boolean
+    @SerializedName("pulls_url") val pull: String,
+    @SerializedName("forks") val forks: Int,
+    @SerializedName("title") val title: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("description") val description: String,
+    @SerializedName("login") val login: String,
+    @SerializedName("full_name") val full_name: String,
+    @SerializedName("forks_count") val forks_count: Int,
+    @SerializedName("stargazers_count") val stargazers_count: Int,
+    @SerializedName("items") val items: List<Items>
+
 )

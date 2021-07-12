@@ -7,7 +7,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 val appModule = module {
     factory { Repository(get()) }
-    viewModel { MainViewModel(get()) }
+    viewModel{MainViewModel(get())}
+    viewModel { SecondViewModel(get()) }
 }
 
 val netWorkModule = module {

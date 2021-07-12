@@ -1,11 +1,11 @@
 package com.example
 
-import Items
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.desafio_android.R
+import com.example.model.mainModel.Items
 
 class MainAdapter(private val items: List<Items>, private val context: Context) :
     Adapter<MainViewHolder>() {

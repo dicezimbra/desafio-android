@@ -12,19 +12,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Items (
+data class Items(
 
-	@SerializedName("name") val name: String,
-	@SerializedName("full_name") val full_name : String,
-	@SerializedName("description") val description : String, //*
-	@SerializedName("title") val title : String,
-	@SerializedName("size") val size : Int,
-	@SerializedName("stargazers_count") val stargazers_count : Int, //*
-	@SerializedName("watchers_count") val watchers_count : Int,
-	@SerializedName("forks_count") val forks_count : Int, //*
-	@SerializedName("forks") val forks : Int, //*
-	@SerializedName("open_issues") val open_issues : Int, //*
-	@SerializedName("watchers") val watchers : Int, //*
-	@SerializedName("avatar_url") val avatar_url : String,
+    @SerializedName("name") val name: String,
+    @SerializedName("full_name") val full_name: String,
+    @SerializedName("description") val description: String, //*
+    @SerializedName("size") val size: Int,
+    @SerializedName("stargazers_count") val stargazers_count: Int, //*
+    @SerializedName("watchers_count") val watchers_count: Int,
+    @SerializedName("forks_count") val forks_count: Int, //*
+    @SerializedName("forks") val forks: Int, //*
+    @SerializedName("open_issues") val open_issues: Int, //*
+    @SerializedName("watchers") val watchers: Int, //*
+    @SerializedName("owner") val owner: Owner
 
 )

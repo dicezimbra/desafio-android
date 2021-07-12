@@ -23,7 +23,7 @@
     <TextView
         android:id="@+id/description"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="72dp"
         android:layout_marginTop="8dp"
         android:text="@string/description"
         android:textSize="12sp"
@@ -32,29 +32,28 @@
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <TextView
-        android:id="@+id/x"
+        android:id="@+id/forks_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="@string/x"
         android:textColor="@color/yellow"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
     <TextView
-        android:id="@+id/y"
+        android:id="@+id/stargazer_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="@string/y"
         android:textColor="@color/yellow"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/x"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/x"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -78,24 +77,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user" />
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="22dp"
         android:layout_height="26dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/description"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description"
         app:srcCompat="@drawable/repositories" />
 
@@ -103,12 +91,11 @@
         android:id="@+id/imageView4"
         android:layout_width="13dp"
         android:layout_height="13dp"
-        android:layout_marginStart="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/y"
-        app:layout_constraintStart_toEndOf="@+id/x"
-        app:layout_constraintTop_toTopOf="@+id/y"
-        app:srcCompat="@drawable/likes"
-        />
+        android:layout_marginStart="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/stargazer_count"
+        app:layout_constraintStart_toEndOf="@+id/stargazer_count"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/likes" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

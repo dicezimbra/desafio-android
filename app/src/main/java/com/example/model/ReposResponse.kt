@@ -12,15 +12,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class ReposResponse (
+data class ReposResponse(
 
-	@SerializedName("name") val name : String,
-	@SerializedName("description") val description : String,
-	@SerializedName("login") val login : String,
-	@SerializedName("avatar_url") val avatar_url : String,
-	@SerializedName("full_name") val full_name : String,
-	@SerializedName("forks_count") val forks_count : Int,
-	@SerializedName("stargazers_count") val stargazers_count : Int,
-	@SerializedName("items") val items : List<Items>
+    @SerializedName("forks") val forks: Int,
+    @SerializedName("title") val title: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("description") val description: String,
+    @SerializedName("login") val login: String,
+    @SerializedName("full_name") val full_name: String,
+    @SerializedName("forks_count") val forks_count: Int,
+    @SerializedName("stargazers_count") val stargazers_count: Int,
+    @SerializedName("items") val items: List<Items>
 
 )

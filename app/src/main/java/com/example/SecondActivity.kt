@@ -1,16 +1,29 @@
 package com.example
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafio_android.R
-import com.example.model.secondModel.SecondResponse
+import com.example.model.secondModel.ResponseItem
+import com.example.model.secondModel.SecondRequest
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class SecondActivity :AppCompatActivity() {
+class SecondActivity : AppCompatActivity() {
 
     private val secondViewModel: SecondViewModel by viewModel()
+
+    companion object {
+        private const val EXTRA_KEY = "extra_key"
+        fun newInstance(context: Context, login:String, name:String) : Intent{
+            val intent = Intent(context, SecondActivity::class.java)
+            intent.putExtra(EXTRA_KEY, SecondRequest(login, name))
+            return intent
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,12 +34,12 @@ class SecondActivity :AppCompatActivity() {
 
     private fun init() {
         secondViewModel.repos.observe(this) { setupList(it) }
-        secondViewModel.fetchRepos()
+        secondViewModel.fetchRepos(intent.extras?.getSerializable(EXTRA_KEY) as SecondRequest)
     }
 
-    private fun setupList(reposResponse: SecondResponse) {
+    private fun setupList(reposResponse: List<ResponseItem>) {
         val recyclerView = findViewById<RecyclerView>(R.id.secondRecycler)
-        recyclerView.adapter = SecondAdapter(reposResponse.items, this)
+        recyclerView.adapter = SecondAdapter(reposResponse, this)
         recyclerView.addItemDecoration(
             DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
         )

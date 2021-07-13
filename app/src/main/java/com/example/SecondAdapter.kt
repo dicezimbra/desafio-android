@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.desafio_android.R
-import com.example.model.secondModel.SecondResponse
+import com.example.model.secondModel.ResponseItem
 
-class SecondAdapter(private val items: List<SecondResponse>, private val context: Context) :
+class SecondAdapter(private val items: List<ResponseItem>, private val context: Context) :
     Adapter<SecondViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SecondViewHolder {

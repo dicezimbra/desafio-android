@@ -5,7 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafio_android.R
-import com.example.model.secondModel.SecondResponse
+import com.example.model.secondModel.ResponseItem
 import com.squareup.picasso.Picasso
 
 class SecondViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -15,11 +15,10 @@ class SecondViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val user = itemView.findViewById<TextView>(R.id.second_username)
     val avatar = itemView.findViewById<ImageView>(R.id.second_avatar)
 
-
-    fun secondBind(item: SecondResponse) {
-        title.text = item.responseItem.title
-        description.text = item.repo.description
-        user.text = item.user.login
+    fun secondBind(item: ResponseItem) {
+        title.text = item.title
+        description.text = item.base?.repo?.description
+        user.text = item.user?.login
         Picasso.get()
             .load(item.user?.avatarUrl)
             .placeholder(R.drawable.avatar)

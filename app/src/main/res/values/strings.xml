@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">desafio-android</string>
+    <string name="title">Título do repositório</string>
+    <string name="titlepull">Título do pull request</string>
+    <string name="description">Descrição do repositório</string>
+    <string name="descriptionpull">Descrição do pull request</string>
+    <string name="x">*</string>
+    <string name="y">*</string>
+    <string name="user">username</string>
+    <string name="name">Nome Sobrenome</string>
+    <string name="bar">/</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+
+</resources>
